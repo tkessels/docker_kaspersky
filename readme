@@ -1,0 +1,20 @@
+#installer help
+/opt/kaspersky/kesl/bin/kesl-setup.pl -h
+
+#start service
+/etc/init.d/kesl-supervisor start
+
+#scan folder
+kesl-control --scan-file /
+
+#get quarantined Files
+kesl-control -B --query
+
+#get results
+kesl-control -E --query
+
+#get license info
+kesl-control -L --query
+
+#get appinfo
+kesl-control -S --app-info
