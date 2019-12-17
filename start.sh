@@ -9,7 +9,7 @@ case "${1}" in
     echo "stage: ${1}"
     start_service
     echo "Usage:"
-    echo "kesl-control --scan-file <path>"
+    cat /root/readme
     /bin/bash
     ;;
   version )
@@ -27,6 +27,8 @@ case "${1}" in
     ;;
   debug )
     echo "stage: ${1}"
+    echo "Usage:"
+    cat /root/readme
     /bin/bash
     ;;
 esac

@@ -6,6 +6,7 @@ RUN wget "https://products.s.kaspersky-labs.com/endpoints/keslinux10/10.1.1.6421
 ADD answer.txt /root/answer.txt
 RUN /opt/kaspersky/kesl/bin/kesl-setup.pl --autoinstall=/root/answer.txt ; true
 ADD start.sh /root/start.sh
+add readme /root/readme
 RUN chmod +x /root/start.sh
 ENTRYPOINT ["/root/start.sh"]
 CMD ["shell"]
