@@ -21,9 +21,9 @@ case "${1}" in
     echo "stage: ${1}"
     start_service
     echo "Starting Scan of /data:"
-    kesl-control --scan-file /data
+    kesl-control --scan-file --action Skip /data
     echo "Found Threats"
-    kesl-control -B --query
+    kesl-control -E --query 'EventType == "ThreatDetected"'
     ;;
   debug )
     echo "stage: ${1}"
