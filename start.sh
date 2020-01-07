@@ -15,7 +15,7 @@ case "${1}" in
   version )
     echo "stage: ${1}"
     start_service
-    kesl-control -S --app-info
+    kesl-control -S --app-info | grep -v '^$'
     ;;
   scan )
     echo "stage: ${1}"
