@@ -16,6 +16,7 @@ case "${1}" in
     echo "stage: ${1}"
     start_service
     kesl-control -S --app-info | grep -v '^$'
+    cat /etc/issue
     ;;
   scan )
     echo "stage: ${1}"

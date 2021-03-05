@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM ubuntu:20.04
 LABEL maintainer="tabledevil"
 LABEL docker.cmd="docker run -it --rm -v /mnt/sdc1:/data tabledevil/kaspersky"
 RUN apt update && apt install -y wget perl
